@@ -636,12 +636,7 @@ def student_course_api():
 @frappe.whitelist()
 def todo_api():
 
-    todos = frappe.get_list(
-        "ToDo",
-        fields=["name", "description", "owner"],
-        order_by="creation desc",
-        limit=5
-    )
+    todos = frappe.get_list("ToDo",fields=["name", "description", "owner"],order_by="creation desc",limit=5)
 
     for todo in todos:
         todo["email"] = frappe.db.get_value(
@@ -655,6 +650,14 @@ def todo_api():
         "records": todos
     }
 
+@frappe.whitelist()
+def create_task(task_subject):
+
+    task = frappe.new_doc("Task")
+    task.task_subject = task_subject
+    task.save()
+
+    return task.name
 
 
 
