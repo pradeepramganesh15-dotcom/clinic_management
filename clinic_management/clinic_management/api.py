@@ -4,7 +4,7 @@ import jwt
 import requests
 from datetime import datetime, timedelta, timezone
 from frappe.auth import LoginManager
-
+from frappe.query_builder import DocType
 
 # ==========================================================
 # 1. CLINIC APPOINTMENT APIS
@@ -598,8 +598,6 @@ def custom_logic(doc, method):
 
 
 
-from frappe.query_builder import DocType
-
 @frappe.whitelist()
 def student_course_api():
 
@@ -634,3 +632,59 @@ def student_course_api():
         )
 
     return result
+
+@frappe.whitelist()
+def todo_api():
+
+    todos = frappe.get_list(
+        "ToDo",
+        fields=["name", "description", "owner"],
+        order_by="creation desc",
+        limit=5
+    )
+
+    for todo in todos:
+        todo["email"] = frappe.db.get_value(
+            "User",
+            todo["owner"],
+            "email"
+        )
+
+    return {
+        "timestamp": frappe.utils.now(),
+        "records": todos
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
