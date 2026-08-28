@@ -5,8 +5,16 @@ app_description = "To manage clinic "
 app_email = "pradeep@gmail.com"
 app_license = "mit"
 
-# Apps
-# ------------------
+
+# Existing hooks.py code
+# ...
+
+scheduler_events = {
+    "daily": [
+        "clinic_management.clinic_management.scheduled_tasks.send_tomorrow_appointment_reminders"
+    ]
+}
+
 
 # required_apps = []
 
@@ -26,8 +34,9 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/clinic_management/css/clinic_management.css"
-# app_include_js = "/assets/clinic_management/js/clinic_management.js"
-
+app_include_js = [
+    "/assets/clinic_management/js/book_vue_demo.bundle.js"
+]
 # include js, css files in header of web template
 # web_include_css = "/assets/clinic_management/css/clinic_management.css"
 # web_include_js = "/assets/clinic_management/js/clinic_management.js"
@@ -138,13 +147,14 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Appointment": {
+        "on_update": "clinic_management.clinic_management.api.appointment_updated"
+    },
+    "Test doctype": {
+        "validate": "clinic_management.clinic_management.api.custom_logic.custom_logic"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
