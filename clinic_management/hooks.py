@@ -159,23 +159,11 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"clinic_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"clinic_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"clinic_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"clinic_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"clinic_management.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "hourly": [
+        "clinic_management.tasks.hourly_student_reminder"
+    ]
+}
 
 # Testing
 # -------
