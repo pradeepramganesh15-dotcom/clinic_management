@@ -487,7 +487,7 @@ def test_realtime(message):
             frappe.TooManyRequestsError
         )
 
-    request_count += 1
+    request_count += 
 
     frappe.cache.set_value(cache_key, request_count, expires_in_sec=30)
 
@@ -671,13 +671,30 @@ def send_notification():
     return "Notification sent"
 
 
+@frappe.whitelist(allow_guest=True)
+def limited_greeting():
+    logger = frappe.logger()
 
+    cache_key = f"limited_greeting:{frappe.request.remote_addr}"
+    request_count = frappe.cache.get_value(cache_key) or 0
 
+    if request_count >= 5:
+        logger.warning("Rate limit exceeded.")
+        frappe.throw(
+            _("Too many requests. Please try again later."),
+            frappe.TooManyRequestsError
+        )
 
+    request_count += 1
+    frappe.cache.set_value(
+        cache_key,
+        request_count,
+        expires_in_sec=60
+    )
 
+    logger.info("Endpoint called.")
 
-
-
+    frappe.response["message"] = "Hello, Rate Limited World!"
 
 
 
