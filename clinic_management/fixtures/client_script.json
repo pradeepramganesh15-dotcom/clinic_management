@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Book",
+  "enabled": 1,
+  "modified": "2026-08-26 18:57:50.964523",
+  "module": "Clinic Management",
+  "name": "book enter",
+  "script": "frappe.ui.form.on('Book', {\n\trefresh(frm) {\n\t\tfrappe.msgprint(\"Welcome to Book\");\n\t}\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 1,
+  "modified": "2026-09-01 15:06:17.260939",
+  "module": null,
+  "name": "Button in user",
+  "script": "frappe.ui.form.on('User', {\r\n    refresh(frm) {\r\n        frm.add_custom_button(__('Send Welcome Email'), function() {\r\n            frappe.msgprint(__('Email Sent!'));\r\n        }, __('Actions'));\r\n    }\r\n});",
+  "view": "Form"
+ }
+]
