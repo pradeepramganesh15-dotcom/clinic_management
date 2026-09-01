@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:medicine",
+ "creation": "2026-08-11 10:46:55.528128",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "medicine",
+  "available_qty",
+  "price_per_piece",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "medicine",
+   "fieldtype": "Data",
+   "label": "Medicine",
+   "unique": 1
+  },
+  {
+   "fieldname": "available_qty",
+   "fieldtype": "Int",
+   "label": "Available Qty"
+  },
+  {
+   "fieldname": "price_per_piece",
+   "fieldtype": "Currency",
+   "label": "Price Per Piece"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nLow Stock\nOut of Stock"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_virtual": 1,
+ "links": [],
+ "modified": "2026-08-11 10:48:16.089995",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Medicine Availability",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

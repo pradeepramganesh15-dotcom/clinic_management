@@ -13,9 +13,9 @@ IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
 
-class IntegrationTestTask(IntegrationTestCase):
+class IntegrationTestlinktest(IntegrationTestCase):
 	"""
-	Integration tests for Task.
+	Integration tests for linktest.
 	Use this class for testing interactions between multiple components.
 	"""
 

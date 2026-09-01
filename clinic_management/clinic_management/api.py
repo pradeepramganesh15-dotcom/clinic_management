@@ -660,8 +660,15 @@ def create_task(task_subject):
     return task.name
 
 
+@frappe.whitelist()
+def send_notification():
 
+    frappe.publish_realtime(
+        "task_creates",
+        message={"name": "TEST-TASK"}
+    )
 
+    return "Notification sent"
 
 
 

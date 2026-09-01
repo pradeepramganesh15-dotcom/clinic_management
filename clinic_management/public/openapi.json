@@ -1,0 +1,66 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Clinic Management API",
+    "description": "API documentation for Clinic Management System",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8000"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "FrappeToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization",
+        "description": "Enter format: token 149d2ab9e3a1b14:af7be1d3c1083af"
+      }
+    }
+  },
+  "paths": {
+    "/api/method/clinic_management.clinic_management.api.create_book": {
+      "post": {
+        "security": [
+          {
+            "FrappeToken": []
+          }
+        ],
+        "summary": "Create a Book",
+        "description": "Creates a new Book using book name, price and available quantity.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["book_name", "price", "available_qty"],
+                "properties": {
+                  "book_name": {
+                    "type": "string",
+                    "example": "Frappe API Guide"
+                  },
+                  "price": {
+                    "type": "number",
+                    "example": 750
+                  },
+                  "available_qty": {
+                    "type": "integer",
+                    "example": 10
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Book created successfully"
+          }
+        }
+      }
+    }
+  }
+}

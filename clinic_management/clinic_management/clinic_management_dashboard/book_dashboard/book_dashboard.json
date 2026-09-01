@@ -1,0 +1,25 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Book Quantity Chart",
+   "width": "Half"
+  },
+  {
+   "chart": "Book Price Chart",
+   "width": "Half"
+  }
+ ],
+ "creation": "2026-08-24 11:01:34.831112",
+ "dashboard_name": "Book Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2026-08-24 12:12:49.548655",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Book Dashboard",
+ "owner": "Administrator"
+}

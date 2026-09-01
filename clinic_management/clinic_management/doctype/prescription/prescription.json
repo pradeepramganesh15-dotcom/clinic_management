@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "PRE-.####",
+ "creation": "2026-08-11 10:39:06.716285",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "appointment",
+  "patient",
+  "doctor",
+  "prescription_date",
+  "medicines",
+  "total_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appointment",
+   "options": "Appointment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prescription_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Prescription Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "medicines",
+   "fieldtype": "Table",
+   "label": "Medicines",
+   "options": "Prescription Medicine"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Prescription",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-11 15:07:49.401380",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Prescription",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Patient Portal User",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

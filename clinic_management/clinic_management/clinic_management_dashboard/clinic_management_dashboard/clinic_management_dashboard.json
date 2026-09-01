@@ -1,0 +1,38 @@
+{
+ "cards": [
+  {
+   "card": "Total Patients"
+  },
+  {
+   "card": "Today's Appointments"
+  },
+  {
+   "card": "Total Revenue"
+  },
+  {
+   "card": "Low Stock Medicines"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Patient Registration Trend",
+   "width": "Half"
+  },
+  {
+   "chart": "Revenue Trend",
+   "width": "Half"
+  }
+ ],
+ "creation": "2026-08-11 12:43:58.998881",
+ "dashboard_name": "Clinic Management Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2026-08-11 12:54:15.068120",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Clinic Management Dashboard",
+ "owner": "Administrator"
+}

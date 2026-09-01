@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "APP-.####",
+ "creation": "2026-08-11 10:32:47.375152",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_email",
+  "patient_name",
+  "doctor",
+  "appointment_date",
+  "appointment_time",
+  "slot",
+  "status",
+  "token"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Appointment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Appointment Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "slot",
+   "fieldtype": "Data",
+   "label": "Slot"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nConfirmed\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.email",
+   "fieldname": "patient_email",
+   "fieldtype": "Data",
+   "label": "Patient Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Int",
+   "label": "Token",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Patient Name",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-25 15:05:08.978592",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Appointment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Patient Portal User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name"
+}

@@ -1,0 +1,54 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+        <div>
+            <h1 class="fw-bold mb-1">📚 Book Library</h1>
+            <p class="text-muted mb-0">Logged in as: <strong>{{ frappe.session.user }}</strong></p>
+        </div>
+        <div class="badge bg-primary fs-6 px-3 py-2">
+            Total Books: {{ total_books }}
+        </div>
+    </div>
+
+    {% if books %}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for book in books %}
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 rounded-3 position-relative">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="card-title fw-bold text-dark mb-0">{{ book.book_name }}</h5>
+                        <span class="badge {% if book.status == 'Available' %}bg-success{% else %}bg-warning text-dark{% endif %}">
+                            {{ book.status or 'N/A' }}
+                        </span>
+                    </div>
+                    
+                    <p class="text-muted small mb-3">By {{ book.author or 'Unknown Author' }}</p>
+
+                    <div class="mt-auto">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="fs-5 fw-bold text-primary">₹{{ "{:,.2f}".format(book.price or 0) }}</span>
+                            <span class="text-warning fw-semibold">⭐ {{ book.rating or 0 }}/5</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center text-muted small border-top pt-2">
+                            <span>Stock:</span>
+                            <span class="fw-semibold {% if (book.available_qty or 0) > 0 %}text-success{% else %}text-danger{% endif %}">
+                                {{ book.available_qty or 0 }} Copies
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-5 my-5 bg-light rounded-3">
+        <h4 class="text-muted">No books available right now.</h4>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

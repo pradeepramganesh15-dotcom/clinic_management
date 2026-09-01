@@ -1,0 +1,44 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2026-08-11 12:01:51.960813",
+ "disable_prepared_report_automation": 0,
+ "disabled": 1,
+ "docstatus": 0,
+ "doctype": "Report",
+ "doctype_to_sync": [],
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": null,
+ "modified": "2026-08-21 18:13:46.014688",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Daily OPD Register",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n    a.name AS \"Appointment:Link/Appointment:120\",\r\n    a.appointment_date AS \"Date:Date:100\",\r\n    a.appointment_time AS \"Time:Time:100\",\r\n    p.patient_name AS \"Patient:Data:180\",\r\n    d.doctor_name AS \"Doctor:Data:180\",\r\n    a.slot AS \"Slot:Data:100\",\r\n    a.status AS \"Status:Data:120\"\r\nFROM\r\n    `tabAppointment` a\r\nLEFT JOIN\r\n    `tabPatient` p ON p.name = a.patient\r\nLEFT JOIN\r\n    `tabDoctor` d ON d.name = a.doctor\r\nWHERE\r\n    a.appointment_date = %(date)s\r\nORDER BY\r\n    a.appointment_time ASC",
+ "ref_doctype": "Appointment",
+ "report_name": "Daily OPD Register",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Doctor"
+  }
+ ],
+ "snapshot_report": 0,
+ "timeout": 0
+}

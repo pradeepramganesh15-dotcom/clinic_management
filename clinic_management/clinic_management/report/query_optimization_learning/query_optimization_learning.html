@@ -1,0 +1,31 @@
+<div style="margin-bottom: 20px;">
+    <h2>Appointment Summary Report</h2>
+    <p>List of all scheduled and confirmed patient appointments.</p>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Patient ID</th>
+            <th>Patient Name</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Token No</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for (var i = 0; i < data.length; i++) { %}
+            <tr>
+                <td>{%= data[i].patient %}</td>
+                <td>{%= data[i].patient_name %}</td>
+                <td>{%= data[i].doctor %}</td>
+                <td>{%= frappe.datetime.str_to_user(data[i].appointment_date) %}</td>
+                <td>{%= data[i].appointment_time %}</td>
+                <td>{%= data[i].status %}</td>
+                <td>{%= data[i].token %}</td>
+            </tr>
+        {% } %}
+    </tbody>
+</table>

@@ -2,28 +2,40 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "autoincrement",
- "creation": "2026-08-28 18:13:59.447091",
+ "creation": "2026-08-18 19:37:31.767028",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "task_subject"
+  "member_name",
+  "reference_type",
+  "reference_name"
  ],
  "fields": [
   {
-   "fieldname": "task_subject",
+   "fieldname": "member_name",
    "fieldtype": "Data",
-   "label": "Task Subject"
+   "label": "Member name"
+  },
+  {
+   "fieldname": "reference_type",
+   "fieldtype": "Link",
+   "label": "Reference Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-28 18:15:30.929633",
+ "modified": "2026-08-18 19:40:43.658290",
  "modified_by": "Administrator",
  "module": "Clinic Management",
- "name": "Task",
- "naming_rule": "Autoincrement",
+ "name": "link test",
  "owner": "Administrator",
  "permissions": [
   {

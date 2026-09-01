@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "BOOK-.##",
+ "creation": "2026-08-18 15:45:37.146302",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "book_details_section",
+  "book_name",
+  "author",
+  "amended_from",
+  "pricing_and_quantity_section",
+  "price",
+  "column_break_dbzd",
+  "available_qty",
+  "book_status_section",
+  "rating",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "book_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Book Name"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "available_qty",
+   "fieldtype": "Int",
+   "label": "Available Qty"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nLow Stock\nOut of Stock"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Book",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Rating"
+  },
+  {
+   "fieldname": "book_details_section",
+   "fieldtype": "Section Break",
+   "label": "Book Details"
+  },
+  {
+   "fieldname": "pricing_and_quantity_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing and Quantity "
+  },
+  {
+   "fieldname": "book_status_section",
+   "fieldtype": "Section Break",
+   "label": "Book Status"
+  },
+  {
+   "fieldname": "column_break_dbzd",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-22 19:05:37.776334",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Book",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

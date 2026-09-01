@@ -1,0 +1,74 @@
+openapi: 3.0.3
+
+info:
+  title: Clinic Management API
+  description: API documentation for Clinic Management System
+  version: 1.0.0
+
+servers:
+  - url: http://127.0.0.1:8000
+
+paths:
+
+  /api/method/clinic_management.clinic_management.api.create_book:
+
+    post:
+
+      summary: Create a Book
+
+      description: Creates a new Book using book name and price.
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+
+            schema:
+              type: object
+
+              required:
+                - book_name
+                - price
+
+              properties:
+
+                book_name:
+                  type: string
+                  example: Python Basics
+
+                price:
+                  type: number
+                  example: 500
+
+      responses:
+
+        "200":
+          description: Book created successfully
+
+          content:
+            application/json:
+
+              schema:
+                type: object
+
+                properties:
+
+                  message:
+                    type: object
+
+                    properties:
+
+                      status:
+                        type: string
+                        example: success
+
+                      book:
+                        type: string
+                        example: BOOK-0001
+
+        "403":
+          description: Permission denied
+
+        "417":
+          description: Validation error

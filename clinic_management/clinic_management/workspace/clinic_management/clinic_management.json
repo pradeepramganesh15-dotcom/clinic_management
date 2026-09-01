@@ -1,0 +1,128 @@
+{
+ "app": "clinic_management",
+ "charts": [],
+ "content": "[{\"id\":\"yNzIu-sSQT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Welcome to the Clinic Management workspace</span>\",\"col\":12}},{\"id\":\"QM0QFTrHHs\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Clinic Welcome Block\",\"col\":12}},{\"id\":\"yOPGKx__Ed\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\">Shortcuts</span>\",\"col\":12}},{\"id\":\"29jZpY4bLr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient\",\"col\":3}},{\"id\":\"MNgx4QiwmC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Doctor\",\"col\":3}},{\"id\":\"aRpuBggb-k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Appointment\",\"col\":3}},{\"id\":\"yveykbKcDq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Prescription\",\"col\":3}},{\"id\":\"Ft0QEhMelw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Invoice\",\"col\":3}},{\"id\":\"yCmAgNII-f\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Entry\",\"col\":3}},{\"id\":\"4dTJgybofY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Medicine\",\"col\":3}},{\"id\":\"pGtldcp7zY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"doimoEox-z\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\">Reports</span>\",\"col\":12}},{\"id\":\"1tC2a22kiM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Opd Register\",\"col\":3}},{\"id\":\"aLoL5ueDEn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Doctor Revenue\",\"col\":3}},{\"id\":\"J-8Kg-1QgV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"00WLTo3Gx-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h3\\\">Doctor Reports</span>\",\"col\":12}},{\"id\":\"m2JWgbIcPg\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Patients\",\"col\":4}},{\"id\":\"8ooh15oNXK\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Revenue\",\"col\":4}},{\"id\":\"wE--yh7TNK\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Today's Appointments\",\"col\":4}},{\"id\":\"6FmM7xrAiJ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Website Users\",\"col\":4}},{\"id\":\"_YLDwD6ib0\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2026-08-11 12:57:06.773731",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Clinic Welcome Block",
+   "label": "Clinic Welcome Block"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Clinic Management",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-08-26 16:03:53.695399",
+ "modified_by": "Administrator",
+ "module": "Clinic Management",
+ "name": "Clinic Management",
+ "number_cards": [
+  {
+   "label": "Total Patients",
+   "number_card_name": "Total Patients"
+  },
+  {
+   "label": "Total Revenue",
+   "number_card_name": "Total Revenue"
+  },
+  {
+   "label": "Today's Appointments",
+   "number_card_name": "Today's Appointments"
+  },
+  {
+   "label": "Total Website Users",
+   "number_card_name": "Total Website Users"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Doctor"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Patient",
+   "link_to": "Patient",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Daily Opd Register",
+   "link_to": "Daily OPD Register",
+   "report_ref_doctype": "Appointment",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Doctor",
+   "link_to": "Doctor",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Doctor Revenue",
+   "link_to": "Doctor Revenue",
+   "report_ref_doctype": "Invoice",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Appointment",
+   "link_to": "Appointment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Prescription",
+   "link_to": "Prescription",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Invoice",
+   "link_to": "Invoice",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Payment Entry",
+   "link_to": "Payment Entry",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Medicine",
+   "link_to": "Medicine",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Clinic Management",
+ "type": "Workspace"
+}
